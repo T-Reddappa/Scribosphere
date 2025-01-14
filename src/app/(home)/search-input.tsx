@@ -9,7 +9,7 @@ import { useSearchParam } from "@/hooks/use-search-param";
 
 export const SearchInput = () => {
   const [value, setValue] = useState("");
-  const [search, setSearch] = useSearchParam();
+  const [, setSearch] = useSearchParam();
 
   const inputRef = useRef<HTMLInputElement>(null);
 

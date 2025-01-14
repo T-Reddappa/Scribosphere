@@ -13,7 +13,6 @@ import {
   ImageIcon,
   ItalicIcon,
   Link2Icon,
-  List,
   ListCollapseIcon,
   ListIcon,
   ListOrderedIcon,
@@ -32,7 +31,7 @@ import {
   UploadIcon,
 } from "lucide-react";
 import { type Level } from "@tiptap/extension-heading";
-import { type ColorResult, CirclePicker, SketchPicker } from "react-color";
+import { type ColorResult, SketchPicker } from "react-color";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -238,7 +237,8 @@ const ImageButton = () => {
 
   const onUpload = () => {
     const input = document.createElement("input");
-    (input.type = "file"), (input.accept = "image/*");
+    input.type = "file";
+    input.accept = "image/*";
 
     input.onchange = (e) => {
       const file = (e.target as HTMLInputElement).files?.[0];
